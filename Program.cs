@@ -14,6 +14,7 @@ app.UseStaticFiles();
 
 app.MapGet("/api/users", async (ApplicationContext db) => await db.Users.ToListAsync());
 
+// определим конечные точки
 app.MapGet("/api/users/{id:int}", async (int id, ApplicationContext db) =>
 {
     // получаем пользователя по id
