@@ -63,7 +63,6 @@ app.MapPut("/api/users", async (User userData, ApplicationContext db) =>
     user.Name = userData.Name;
     await db.SaveChangesAsync();
     return Results.Json(user);
-
 });
 
 
